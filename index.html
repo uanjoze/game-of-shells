@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>The Game of Shells</title>
+    <link href='https://fonts.googleapis.com/css?family=Permanent+Marker&text=TheGamofSls123' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto&text=RestShakEyMdiumHrdx1234567890wng' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="custom-select.css">
+</head>
+<body>
+
+<div class="game">
+    <div id="container" class="container">
+        <span id="ball" class="ball pos-2"></span>
+        <button id="shell-1" class="shell pos-1 zindex-back"></button>
+        <button id="shell-2" class="shell pos-2 zindex-back"></button>
+        <button id="shell-3" class="shell pos-3 zindex-back"></button>
+    </div>
+    <div class="controls">
+        <button id="reset">Reset</button>
+        <button id="shake">Shake</button>
+        <span class="custom-select">
+            <select id="difficulty">
+                <option value="easy">Easy</option>
+                <option value="medium" selected>Medium</option>
+                <option value="hard">Hard</option>
+                <option value="extreme">Extreme</option>
+            </select>
+        </span>
+        <span id="results" class="results">
+            <span id="wins">0 wins</span> out of <span id="games">0 games</span>
+        </span>
+    </div>
+</div>
+
+<script src="game-of-shells.js"></script>
+<script>
+var game = new GameOfShells();
+
+game.init();
+</script>
+</body>
+</html>
